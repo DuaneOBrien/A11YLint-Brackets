@@ -1,0 +1,72 @@
+<html lang="en" class="no-js">
+	<head>
+		<title>Two Words</title>
+		<!--[if lt IE 9]>
+			<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>			
+		<![endif]-->
+        <script type='text/javascript' src='/some/script/that/does/not/exist.js'></script>
+        <script type='text/javascript' src='/another/script/that/does/not/exist.js'></script>
+
+        <script type="text/javascript">
+            console.log('You Should Not Be Seeing This. You Are Not Stripping Script Well');
+        </script>
+        
+		<style type="text/css" id="custom-background-css">
+            body.custom-background { 
+                background-color: #efefef; 
+            }
+        </style>
+
+        <link rel="stylesheet" type="text/css" media="all" href="/some/non/existant/style.css" />
+
+		
+		<!-- bring in theme options styles -->
+		<style>
+			h1, h2, h3, h4, h5, h6{ 
+				font-family: Open Sans; 
+				font-weight: normal; 
+				color: #222222; 
+			}
+			body{ 
+				font-family: Open Sans; 
+				font-weight: normal; 
+				color: #222222; 
+			}
+			a{ 
+				color: #ff7700; 
+			}
+			a:hover{ 
+				color: #ff9900; 
+			}
+			a:active{ 
+				color: #ff9800; 
+			}
+			.top-nav { 
+				background-color: #4D4D4D;
+			}
+			.top-nav > li > a { 
+				color: #E6E6E6 !important;
+			}
+			.top-nav > li > a:hover { 
+				color: #E6E6E6 !important;
+			}
+			#main article {
+				border-bottom: none;
+			}
+			</style>		<script src="/some.sneaky.js.file.js" type="text/javascript"></script>
+				
+	</head>
+	
+	<body class="home blog custom-background">
+
+		<div class="row container">
+			<div class="twelve columns">
+				<header role="banner" id="top-header" style="background-color:white;color:black">					
+					<div class="siteinfo">
+						<h1><a class="brand" id="logo" href="/" title="Homepage Link">Some Title</a></h1>
+					</div>
+                </header>
+            </div>
+        </div>
+    </body>
+</html>

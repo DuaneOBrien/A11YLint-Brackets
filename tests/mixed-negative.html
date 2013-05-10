@@ -1,0 +1,150 @@
+<html lang="en">
+<head>
+    <title>Two Words</title>
+</head>
+<body>
+    
+    <!-- Tests For Adaptable -->
+    
+        <!-- Tests For Table To Have Summaries -->
+    
+            <table id="summarynegtest">
+                <tr><th>Column 1</th><th>Column 2</th></tr>
+                <tr><td>Foo</td><td>Bar</td></tr>
+            </table>
+
+        <!-- Tests For Table To Have Table Heads -->
+    
+            <table id="thnegtest" summary="A TH Good Summary 1">
+                <tr><td>Foo</td><td>Bar</td></tr>
+            </table>
+
+        <!-- Tests For Unique Summary --> 
+    
+            <table id="uniquesummarynegtest1" summary='FOO'>
+                <tr><th>Column 1</th><th>Column 2</th></tr>
+                <tr><td>Foo</td><td>Bar</td></tr>
+            </table>
+            <table id="uniquesummarynegtest2" summary='FOO'>
+                <tr><th>Column 1</th><th>Column 2</th></tr>
+                <tr><td>Foo</td><td>Bar</td></tr>
+            </table>
+
+    <!-- Tests For Distinguishable -->
+    
+        <!-- Tests For Contrast Minimum -->
+    
+            <div id="contrastnegtest" style="background-color:yellow">
+                <h1 style="color:white">I Am A Fish</h1>
+            </div>
+
+    <!-- Tests For Headings And Labels -->
+    
+        <!-- Headings Have Content -->
+
+            <h1 id="h1emptynegtest" style="color:black;background-color:white"></h1>
+            <h2 id="h2emptynegtest"></h2>
+            <h3 id="h3emptynegtest"></h3>
+            <h4 id="h4emptynegtest"></h4>
+            <h5 id="h5emptynegtest"></h5>
+            <h6 id="h6emptynegtest"></h6>
+
+    <!-- Tests For Input Assistance -->
+
+        <!-- Fieldset Has Legend Inside Label -->
+    
+            <form id="fieldsetlegendtestnegative">
+                <fieldset>
+                </fieldset>
+            </form>
+        
+        <!-- No Select Or Textarea Inside Label -->
+    
+            <form id="labelselecttestnegative">
+                <label>
+                    <select>
+                    </select>
+                </label>
+                <label>
+                    <textarea></textarea>
+                </label>
+            </form>
+
+        <!-- Image Input Has Alt Or Title -->
+    
+            <form id="imageinputtestnegative">
+                <input type="image" />
+            </form>
+    
+        <!-- Input Has Values -->
+    
+            <form id="inputvaluetestnegative">
+                <input type="button" />
+                <input type="submit" />
+                <input type="reset" /> 
+            </form>
+    
+        <!-- Buttons Must Have Text -->
+    
+            <form id="buttontestnegative">
+                <button></button>
+            </form>
+
+        <!-- Labels Must Have Text -->
+
+            <form id="labeltestnegative">
+                <label></label>
+            </form>
+
+        <!-- Legend Must Have Text -->
+
+            <form id="legendtestnegative">
+                <legend></legend>
+            </form>
+    
+        <!-- Form Elements Must Have Unique IDs -->
+
+            <form id="formuniqueidnegative"></form>
+            <form id="formuniqueidnegative"></form>
+
+    <!-- Tests For Link Assistance -->
+    
+        <!-- Test For Link Minimum Length -->
+    
+            <a id="linklengthnegtest" href="foo" title="This Link Goes To Goobar">foo</a>
+    
+        <!-- Test For Link Title -->
+
+            <a id="linktitlenegtest" href="foobar">foobar</a>
+    
+    <!-- Tests For Navigable -->
+    
+        <!-- Tests For Unique Frame Title  -->
+    
+            <iframe id="iframehastitlenegtest" style="display:block" />
+
+        <!-- Tests For Unique Frame Title  -->
+
+            <iframe id="iframeuniquetitlenegtest1" title="iframeuniquetitlenegtest1" style="display:block" />
+            <iframe id="iframeuniquetitlenegtest1" title="iframeuniquetitlenegtest1" style="display:block" />
+
+        <!-- Tests For Frames Not Hidden -->
+
+            <iframe id="iframehiddennegtest" title="iframehiddennegtest" style="display:none" />
+
+    <!-- Tests For Text Alternatives -->
+    
+        <!-- Images Need Alt Textx -->
+    
+            <img id="alttextnegtest" src="foo.jpg" />
+    
+        <!-- Image Alt Tags Can't Be Image Filename -->
+    
+            <img id="alttextnotfilenamenegtest" src="foo.jpg" alt="foo.jpg" />
+    
+        <!-- Images With Alts Have No Presentation Roles -->
+
+            <img id="presentationrolenegtest" src="foo.jpg" alt="Foo Image" role="presentation"/>
+    
+    </body>
+</html>

@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <!-- THESE TESTS SHOULD NEVER FAIL -->
+    <title>Two Words</title>
+</head>
+<body>
+    
+    <!-- Tests For Adaptable -->
+    
+        <!-- Tests For Table To Have Summaries -->
+    
+            <table id="summarypostest" summary="A Good Summary">
+                <tr><th>Column 1</th><th>Column 2</th></tr>
+                <tr><td>Foo</td><td>Bar</td></tr>
+            </table>
+
+        <!-- Tests For Table To Have Table Heads -->
+    
+            <table id="thpostest" summary="A TH Good Summary 2">
+                <tr><th>Column 1</th><th>Column 2</th></tr>
+                <tr><td>Foo</td><td>Bar</td></tr>
+            </table>
+
+        <!-- Tests For Unique Summary --> 
+    
+            <table id="uniquesummarypostest" summary='BAR'>
+                <tr><th>Column 1</th><th>Column 2</th></tr>
+                <tr><td>Foo</td><td>Bar</td></tr>
+            </table>
+
+    <!-- Tests For Distinguishable -->
+    
+        <!-- Tests For Contrast Minimum -->
+    
+            <div id="contrastpostest" style="background-color:black">
+                <h1 style="color:white">I Am A Fish</h1>
+            </div>
+
+    <!-- Tests For Headings And Labels -->
+    
+        <!-- Headings Have Content -->
+
+            <h1 id="h1emptypostest" style="color:black;background-color:white">Head One</h1>
+            <h2 id="h2emptypostest">Head Two</h2>
+            <h3 id="h3emptypostest">Head 3</h3>
+            <h4 id="h4emptypostest">Head Four</h4>
+            <h5 id="h5emptypostest">Head 5</h5>
+            <h6 id="h6emptypostest">Head 6</h6>
+
+    <!-- Tests For Input Assistance -->
+
+        <!-- Fieldset Has Legend Inside Label -->
+    
+            <form id="fieldsetlegendtestpositive">
+                <fieldset>
+                    <legend>Some Fields</legend>
+                </fieldset>
+            </form>
+        
+        <!-- No Select Or Textarea Inside Label -->
+    
+            <form id="labelselecttestpositive">
+                <label>A Label</label><select></select>
+                <label>another label</label><textarea></textarea>
+            </form>
+
+        <!-- Image Input Has Alt Or Title -->
+    
+            <form id="imageinputtestpositive">
+                <input type="image" title="A Title" />
+                <input type="image" alt="A Title" />
+            </form>
+    
+        <!-- Input Has Values -->
+    
+            <form id="inputvaluetestpositive">
+                <input type="button" value="A Button" />
+                <input type="submit" title="Submit" />
+                <input type="reset" value="Reset" title="reset"/> 
+            </form>
+    
+        <!-- Buttons Must Have Text -->
+    
+            <form id="buttontestpositive">
+                <button>Something</button>
+            </form>
+
+        <!-- Labels Must Have Text -->
+
+            <form id="labeltestpositive">
+                <label>Something</label>
+            </form>
+
+        <!-- Legend Must Have Text -->
+
+            <form id="legendtestpositive">
+                <legend>Something</legend>
+            </form>
+    
+        <!-- Form Elements Must Have Unique IDs -->
+
+            <form id="formuniqueidpositive"></form>
+
+    <!-- Tests For Link Assistance -->
+    
+        <!-- Test For Link Minimum Length -->
+    
+            <a id="linklengthpostest" href="foobar" title="This link goes to foobar">foob</a>
+    
+        <!-- Test For Link title -->
+    
+            <a id="linktitlepostest" href="foobar" title="This link goes to foobar">foobar</a>
+    
+    <!-- Tests For Navigable -->
+    
+        <!-- Tests For Unique Frame Title  -->
+    
+            <iframe id="iframehastitlepostest" title="iframehastitlepostest" style="display:block" />
+
+        <!-- Tests For Unique Frame Title  -->
+
+            <iframe id="iframeuniquetitlepostest1" title="iframeuniquetitlepostest1" style="display:block" />
+            <iframe id="iframeuniquetitlepostest2" title="iframeuniquetitlepostest2" style="display:block" />
+
+        <!-- Tests For Frames Not Hidden -->
+
+            <iframe id="iframehiddenpostest" title="iframehiddenpostest" style="display:block" />
+
+    <!-- Tests For Text Alternatives -->
+    
+        <!-- Images Need Alt Textx -->
+    
+            <img id="alttextpostest" src="foo.jpg" alt="Valid Alt Text"/>
+    
+        <!-- Image Alt Tags Can't Be Image Filename -->
+    
+            <img id="alttextnotfilenamepostest" src="foo.jpg" alt="footjpg" />
+    
+        <!-- Images With Alts Have No Presentation Roles -->
+
+            <img id="presentationrolepostest" src="foo.jpg" alt="Foo Image" role="Navigation"/>
+    
+    </body>
+</html>

@@ -363,7 +363,7 @@ var A11YLINT = (function () {
             pageTitled : {
                 missingH1: {
                     name:    'Missing or empty H1 element',
-                    message: 'There should be at least one H1 element per page and it shoulnt be empty',
+                    message: 'There should be at least one H1 element per page and it shouldn\'t be empty',
                     ruleUrl: 'http://oaa-accessibility.org/rule/14/',
                     level: 'A',
                     template: false,

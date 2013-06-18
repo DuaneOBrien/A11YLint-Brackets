@@ -30,7 +30,6 @@ define(function (require, exports, module) {
         // The name says it all.  We should be doing something smarter here.  Probably loading it into a iframe if we can solve the potential issues there.
         // This one strips ok, but messes up the wordcount.
         // return sourcecode.replace(new RegExp(/<script(.|\n)*?\/script>/img), '');
-        console.log(sourcecode);
         var sanitized = sourcecode.replace(new RegExp(/<script/img), '<noscript');
         return sanitized.replace(new RegExp(/<\/script/img), '</noscript');
         // return sourcecode.replace(new RegExp(/<script(.|\n)*?\/script>/img), '');
@@ -50,7 +49,6 @@ define(function (require, exports, module) {
         
         if (language && language.getId() === "html") {
             var text = stripOutScriptTagsButDoNotPretendThatIsSecurity(editor.document.getText());
-            console.log(text);
             result = A11YLINT.report(text, $);
                     
             if (A11YLINT.errors.length > 0) {
